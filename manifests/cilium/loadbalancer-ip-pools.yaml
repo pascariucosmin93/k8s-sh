@@ -1,0 +1,16 @@
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: lb-pool-public
+spec:
+  blocks:
+    - cidr: 198.51.100.0/24
+---
+apiVersion: cilium.io/v2alpha1
+kind: CiliumLoadBalancerIPPool
+metadata:
+  name: lb-pool-private
+spec:
+  blocks:
+    - cidr: 203.0.113.0/24
+
