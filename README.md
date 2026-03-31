@@ -53,38 +53,38 @@ It is not meant to be a universal cluster installer. It is a reusable example of
 
 ```bash
 ./scripts/bootstrap-cluster.sh \
-  --control-plane 10.0.0.10 \
-  --workers 10.0.0.21,10.0.0.22,10.0.0.23 \
+  --control-plane x.x.x.x \
+  --workers x.x.x.x,x.x.x.x,x.x.x.x \
   --ssh-user root \
-  --router-peer 192.0.2.10 \
-  --router-asn 65000 \
-  --cluster-asn 65001 \
-  --lb-pool-public 198.51.100.0/24 \
-  --lb-pool-private 203.0.113.0/24
+  --router-peer x.x.x.x \
+  --router-asn xxxx \
+  --cluster-asn xxxx \
+  --lb-pool-public x.x.x.0/24 \
+  --lb-pool-private x.x.x.0/24
 ```
 
 ### Add a worker
 
 ```bash
 ./scripts/add-node.sh \
-  --master 10.0.0.10 \
-  --node 10.0.0.24 \
+  --master x.x.x.x \
+  --node x.x.x.x \
   --ssh-user root \
   --node-name worker-4 \
-  --router1 192.0.2.10 \
-  --router2 192.0.2.11
+  --router1 x.x.x.x \
+  --router2 x.x.x.x
 ```
 
 ### Remove a worker
 
 ```bash
 ./scripts/remove-node.sh \
-  --master 10.0.0.10 \
+  --master x.x.x.x \
   --node-name worker-4 \
-  --node-host 10.0.0.24 \
+  --node-host x.x.x.x \
   --ssh-user root \
-  --router1 192.0.2.10 \
-  --router2 192.0.2.11
+  --router1 x.x.x.x \
+  --router2 x.x.x.x
 ```
 
 ## Notes
